@@ -313,7 +313,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 2rem;
-  padding-left: 100px;
+  /* padding-left: 100px; */
+  justify-items: center;
 }
 .service-item {
   width: 300px;
@@ -452,6 +453,32 @@ header {
 }
 /* --------------end service section -----------------------*/
 
+/* --------------start skill section -----------------------*/
+
+.skill-text {
+  margin-top: 0 !important;
+  padding-top: 60px !important;
+}
+
+.skill-contect {
+  width: 100%;
+  height: 1000px;
+}
+.skill-contect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-texts > h1 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+.skill-texts > p {
+  color: #fff;
+}
+
+/* --------------end skill section -----------------------*/
+
 /* media quaries */
 
 @media (max-width: 1200px) {
@@ -557,6 +584,10 @@ header {
 @media (max-width: 560px) {
   .service-content {
     grid-template-columns: 1fr;
-    justify-content: center;
+  }
+}
+@media (max-width: 546px) {
+  .srvice-head {
+    padding-top: 100px;
   }
 }
