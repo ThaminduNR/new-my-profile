@@ -7,13 +7,14 @@
 }
 
 body {
-  background-color: #222222 !important;
+  /* background-color: #222222 !important; */
   font-family: "Poppins", sans-serif !important;
 }
 
 .hero {
   width: 100%;
   height: 100vh;
+  background-color: #171717;
 }
 
 .logo img {
@@ -32,11 +33,13 @@ header {
   position: fixed;
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   top: 70px;
   height: auto;
   display: flex;
+  background-color: #171717;
 }
 .nav-list ul li {
   display: inline-block;
@@ -219,6 +222,11 @@ header {
 .about {
   width: 100%;
   height: auto;
+  background-color: #fff;
+}
+
+.abt-sec-color {
+  color: #c7c6c6 !important;
 }
 
 /* ----------reuse section heading---------------------- */
@@ -248,23 +256,24 @@ header {
   height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: #fff;
 }
 
 .abt-img > img {
   width: 500px;
 }
 .abt-text > h1 {
-  color: #fff;
+  color: #161616;
 }
 .abt-text > h3 {
   color: #0082c8;
 }
 .abt-text > p {
-  color: #fff;
+  color: #161616;
 }
 
 .abt-list > li > span {
-  color: #fff;
+  color: #161616;
   line-height: 3.5;
   font-size: 1rem;
 }
@@ -310,6 +319,7 @@ header {
   height: auto;
   margin-top: 150px;
   padding-top: 50px;
+  background-color: #171717;
 }
 
 .service-content {
@@ -460,6 +470,12 @@ header {
 
 /* --------------start skill section -----------------------*/
 
+.skill {
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+}
+
 .skill-text {
   margin-top: 0 !important;
   padding-top: 60px !important;
@@ -519,6 +535,7 @@ header {
 .resume {
   width: 100%;
   height: auto;
+  background-color: #171717;
 }
 .resume-content {
   display: grid;
@@ -536,7 +553,7 @@ header {
   color: #fff;
 }
 .resume-heading i {
-  color: #fff;
+  color: #525252;
   font-size: 2rem;
 }
 .experience-content {
@@ -578,6 +595,8 @@ header {
 .gallery {
   width: 100%;
   height: auto;
+  background-color: #171717;
+  padding-bottom: 15px;
 }
 
 .gallery-heading-padding {
@@ -637,6 +656,9 @@ header {
     width: 220px;
     height: auto;
   }
+  .about {
+    height: 800px;
+  }
 }
 @media (max-width: 925px) {
   .nav-list {
@@ -680,6 +702,13 @@ header {
   .section-heading {
     margin-top: 200px;
     margin-bottom: 50px;
+  }
+
+  .hero {
+    height: 920px;
+  }
+  .about {
+    height: 1050px;
   }
 
   .about-content {
@@ -760,6 +789,6 @@ header {
 
 @media (max-width: 473px) {
   .main-text > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
