@@ -37,7 +37,8 @@ header {
 }
 
 .scrolled {
-  background-color: #171717;
+  background-color: black;
+  border-bottom: 1px solid gray;
 }
 
 .hero-content {
@@ -146,10 +147,20 @@ header {
   color: aliceblue;
   font-weight: 300;
 }
-.main-text > h1 {
+.thami-name {
   color: aliceblue;
   font-size: 5rem;
   font-weight: bold;
+  transition: 0.3s ease-out;
+}
+
+.thami-txt {
+  color: #0082c8;
+  transition: 0.3s ease-out;
+}
+.thami-name:hover .thami-txt {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
 }
 .main-text {
   display: flex;
@@ -158,7 +169,7 @@ header {
   align-items: center;
 }
 .develop {
-  color: #0082c8;
+  color: #fff;
   font-weight: 500;
   font-size: 2rem;
   width: fit-content;
@@ -234,6 +245,10 @@ header {
   font-size: 0.6rem;
 }
 
+.social-media {
+  width: fit-content;
+}
+
 .social-media > ul {
   display: flex;
   padding: 0;
@@ -249,14 +264,15 @@ header {
 
 .social-icon-style {
   padding: 10px;
-  background-color: #171717;
+  background-color: transparent;
   border-radius: 40%;
   color: #fff;
+
   transition: 0.4s all;
 }
 .social-icon-style:hover {
   padding: 10px;
-  background-color: rgb(65, 64, 64);
+  background-color: #fff;
   border-radius: 10%;
   color: #0082c8;
   transform: scale(1.2);
