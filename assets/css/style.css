@@ -44,7 +44,9 @@ header {
 .nav-list ul li {
   display: inline-block;
   padding-left: 25px;
-  transition: 0.5s ease;
+}
+.nav-list ul li a {
+  transition: 0.3s ease-in;
 }
 .nav-list ul li a:hover {
   color: #0082c8;
@@ -138,10 +140,13 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.main-text > .develop {
+.develop {
   color: #0082c8;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  width: fit-content;
+  height: 45px;
+  border-right: 4px solid #fff;
 }
 .hire-btn {
   width: 200px;
@@ -208,6 +213,10 @@ header {
   display: none !important;
 }
 
+.mobi-con-btn {
+  font-size: 0.6rem;
+}
+
 .social-media > ul {
   display: flex;
   padding: 0;
@@ -217,9 +226,23 @@ header {
   list-style: none;
 }
 .social-media > ul > li > a > i {
-  padding-right: 25px;
-  font-size: 1.5rem;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+.social-icon-style {
+  padding: 10px;
+  background-color: #171717;
+  border-radius: 40%;
   color: #fff;
+  transition: 0.4s all;
+}
+.social-icon-style:hover {
+  padding: 10px;
+  background-color: rgb(65, 64, 64);
+  border-radius: 10%;
+  color: #0082c8;
+  transform: scale(1.2);
 }
 
 /* about section */
@@ -626,7 +649,7 @@ header {
   transform: scale(1.2);
 }
 .gallery-img {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 25px;
 }
 
@@ -676,7 +699,6 @@ header {
 
 .pro-overlay-btn a {
   text-decoration: none;
-  color: #006399;
 }
 
 .pro-overlay-btn {
@@ -685,10 +707,12 @@ header {
   border: 2px solid white;
   background-color: transparent;
   transition: 0.4s all;
+  color: #fff;
 }
 
 .pro-overlay-btn:hover {
   background-color: #fff;
+  color: #0082c8;
 }
 
 .project-item img {
@@ -729,6 +753,7 @@ header {
 
 .contact-content {
   display: flex;
+  gap: 25px;
 }
 .form {
   width: 50%;
@@ -750,10 +775,52 @@ header {
 }
 
 .contact-info {
-  width: 500px;
-  height: 700px;
+  width: 50%;
 }
 
+.cont-text {
+  color: #fff;
+}
+
+.cont-text-p {
+  color: #fff;
+}
+.cont-text-list {
+  margin-top: 40px;
+}
+
+.cont-text-list-item i {
+  color: #555656;
+  font-size: 2rem;
+}
+.cont-text-list-item {
+  display: flex;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
+.cont-text-address {
+  padding-left: 15px;
+}
+
+.cont-text-address h4 {
+  color: #0082c8;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: light;
+}
+
+.cont-text-address p {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+.social-media p {
+  color: #fff;
+  margin: 0;
+}
+.social-media > .bottom-social {
+  margin-top: 20px;
+}
 /* --------------end contact section -----------------------*/
 
 /* media quaries */
