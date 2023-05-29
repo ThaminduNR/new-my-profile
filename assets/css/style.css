@@ -14,22 +14,23 @@ body {
 .hero {
   width: 100%;
   height: 100vh;
-  background-color: #171717;
+  background-color: rgba(0, 0, 0, 0.6);
+  /*  */
 }
 
 .logo img {
   width: 130px;
 }
 
-header {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 65px;
+  padding: 10px 30px;
   width: 100%;
   height: 70px;
   background-color: #1c1c1ce7;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   position: fixed;
   z-index: 1;
 }
@@ -39,8 +40,15 @@ header {
   top: 70px;
   height: auto;
   display: flex;
-  background-color: #171717;
+  /* background-color: #171717; */
 }
+.background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .nav-list ul li {
   display: inline-block;
   padding-left: 25px;
@@ -112,9 +120,13 @@ header {
   height: calc(100vh - 70px);
 }
 .main-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  width: 100%;
   padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-img {
   display: flex;
@@ -133,12 +145,14 @@ header {
 }
 .main-text > h1 {
   color: aliceblue;
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: bold;
 }
 .main-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .develop {
   color: #0082c8;
@@ -297,6 +311,7 @@ header {
 }
 .abt-text > p {
   color: #161616;
+  margin: 0;
 }
 
 .abt-list > li > span {
@@ -749,6 +764,7 @@ header {
   width: 100%;
   height: auto;
   background-color: #171717;
+  padding-bottom: 55px;
 }
 
 .contact-content {
@@ -822,6 +838,22 @@ header {
   margin-top: 20px;
 }
 /* --------------end contact section -----------------------*/
+
+/* --------------start footer section -----------------------*/
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #555656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: #fff;
+}
+
+/* --------------end footer section -----------------------*/
 
 /* media quaries */
 
@@ -902,9 +934,6 @@ header {
     margin-bottom: 50px;
   }
 
-  .hero {
-    height: 920px;
-  }
   .about {
     height: 1050px;
   }
@@ -942,6 +971,21 @@ header {
 
   .project-zone {
     flex-direction: column;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contact-info {
+    width: 100%;
+  }
+
+  .hero {
+    background-color: #171717;
   }
 }
 @media screen and (max-width: 767px) {
@@ -992,5 +1036,19 @@ header {
 @media (max-width: 473px) {
   .main-text > h1 {
     font-size: 2rem;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
   }
 }
