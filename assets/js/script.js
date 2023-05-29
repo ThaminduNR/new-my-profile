@@ -25,27 +25,14 @@ var typing = new Typed(".develop", {
   loop: true,
 });
 
-$(function () {
-  $(document).on("click", "a.page-scroll", function (event) {
-    var $anchor = $(this);
-    $("html,body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $($anchor.attr("href")).offset().top - 45,
-        },
-        1500,
-        "easeInOutExpo"
-      );
-    event.preventDefault();
-  });
-});
+//change the color in header
+document.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 50) {
-    /*height in pixels when the navbar becomes non opaque*/
-    $(".header").addClass("header");
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+    console.log("Scrlled");
   } else {
-    $(".header").removeClass("header");
+    header.classList.remove("scrolled");
   }
 });
