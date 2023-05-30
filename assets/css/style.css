@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   /* background-color: #222222 !important; */
@@ -149,7 +152,7 @@ header {
 }
 .thami-name {
   color: aliceblue;
-  font-size: 5rem;
+  font-size: 4.8rem;
   font-weight: bold;
   transition: 0.3s ease-out;
 }
@@ -159,6 +162,11 @@ header {
   transition: 0.3s ease-out;
 }
 .thami-name:hover .thami-txt {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.thami-name:hover {
   -webkit-text-stroke: 1px #fff;
   color: transparent;
 }
@@ -288,6 +296,9 @@ header {
 .abt-sec-color {
   color: #c7c6c6 !important;
 }
+.pro-sec-color {
+  color: rgb(53, 51, 51) !important;
+}
 
 /* ----------reuse section heading---------------------- */
 .section-heading {
@@ -317,6 +328,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .abt-img > img {
@@ -400,13 +412,14 @@ header {
   height: 300px;
   background-color: black;
   border-radius: 40px;
-
+  border: 2px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
   gap: 1rem;
+  transition: 0.4s all !important;
 }
 
 .sev-icon > i {
@@ -504,6 +517,10 @@ header {
   transition: all 0.3s ease;
 }
 
+.service-item:hover {
+  border: 2px solid #0082c8;
+}
+
 .card:hover {
   height: 270px;
 }
@@ -552,6 +569,7 @@ header {
 .skill-contect {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 
 .skill-texts > h1 {
@@ -604,6 +622,7 @@ header {
 .resume-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 .resume-heading {
   display: flex;
@@ -633,6 +652,12 @@ header {
 }
 .ex-text h2:first-child {
   color: #0082c8;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.ex-text h2:first-child:hover {
+  color: #fff;
+  -webkit-text-stroke: 2px #fff;
 }
 .ex-text h2 {
   font-size: 1.7rem;
@@ -671,6 +696,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+  /* overflow: hidden; */
 }
 
 .inner-gimg {
@@ -691,7 +717,10 @@ header {
 
 /* --------------start project section -----------------------*/
 .projects {
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
+  padding-bottom: 70px;
+  background: url(../images/new\ pro\ bac.jpg) repeat fixed 100%;
+  background-position: center;
 }
 .projects-content {
   width: 100%;
@@ -762,6 +791,7 @@ header {
 }
 .project-item h2 {
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .see-more {
@@ -789,6 +819,7 @@ header {
 .contact-content {
   display: flex;
   gap: 25px;
+  overflow: hidden;
 }
 .form {
   width: 50%;
@@ -872,6 +903,33 @@ footer p {
   color: #fff;
 }
 
+.back-to-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #0082c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  border-radius: 20%;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.back-to-btn.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.back-to-btn i {
+  font-size: 20px;
+  color: #fff;
+}
+
 /* --------------end footer section -----------------------*/
 
 /* media quaries */
@@ -898,7 +956,7 @@ footer p {
   }
   .service-content {
     grid-template-columns: 1fr 1fr;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     gap: 2rem;
   }
   .inner-gimg {
@@ -962,6 +1020,7 @@ footer p {
     height: 500px;
     display: grid;
     grid-template-columns: 1fr;
+    overflow: hidden;
   }
   .abt-img {
     display: flex;
@@ -977,6 +1036,7 @@ footer p {
 
   .service-content {
     padding-left: 0;
+    overflow: hidden;
   }
 
   .gallery-content {

@@ -36,3 +36,15 @@ document.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+//back to top
+
+document.addEventListener("scroll", () => {
+  const toTop = document.querySelector(".back-to-btn");
+
+  if (window.scrollY > 150) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});
