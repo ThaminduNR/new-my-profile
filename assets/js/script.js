@@ -29,7 +29,7 @@ var typing = new Typed(".develop", {
 document.addEventListener("scroll", () => {
   const header = document.querySelector("header");
 
-  if (window.scrollY > 0) {
+  if (window.scrollY > 100) {
     header.classList.add("scrolled");
     console.log("Scrlled");
   } else {
@@ -48,3 +48,17 @@ document.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 });
+
+function animateText() {
+  const thamiText = document.querySelector(".thami-name");
+
+  thamiText.classList.add("animate__heartBeat");
+
+  setTimeout(() => {
+    thamiText.classList.remove("animate__heartBeat");
+  }, 1000);
+
+  console.log("Animate....");
+}
+
+setInterval(animateText, 8500);
