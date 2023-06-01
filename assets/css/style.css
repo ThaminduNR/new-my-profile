@@ -328,7 +328,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #fff;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .abt-img > img {
@@ -1017,7 +1017,7 @@ footer p {
 
   .about-content {
     width: 100%;
-    height: 500px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
