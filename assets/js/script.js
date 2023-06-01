@@ -29,7 +29,7 @@ var typing = new Typed(".develop", {
 document.addEventListener("scroll", () => {
   const header = document.querySelector("header");
 
-  if (window.scrollY > 100) {
+  if (window.scrollY > 150) {
     header.classList.add("scrolled");
     console.log("Scrlled");
   } else {
@@ -42,7 +42,7 @@ document.addEventListener("scroll", () => {
 document.addEventListener("scroll", () => {
   const toTop = document.querySelector(".back-to-btn");
 
-  if (window.scrollY > 150) {
+  if (window.scrollY > 1000) {
     toTop.classList.add("active");
   } else {
     toTop.classList.remove("active");
@@ -62,3 +62,10 @@ function animateText() {
 }
 
 setInterval(animateText, 8500);
+
+//preloder animtion
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("preloder").style.display = "none";
+  }, 6000);
+});

@@ -15,12 +15,15 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/gh/vaibhav111tandon/vov.css@latest/vov.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/preloder.css">
     <title>Thamindu | Ranawaka</title>
 </head>
 
 <body>
     <main>
+        <div id="preloder">
+            <img src="assets/gif/Thamindu.gif" alt="pre-loader">
+        </div>
         <section class="hero" id="hero">
             <video autoplay loop muted plays-inline class="background-clip">
                 <source src="assets/video/xs.mp4">
@@ -500,12 +503,6 @@
     <!-- init AOS -->
     <script>
         AOS.init();
-        $(document).ready(() => {
-            setTimeout(() => {
-                $("#pre").css("display", "none")
-            }, 800)
-
-        })
     </script>
 </body>
 
